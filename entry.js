@@ -248,7 +248,7 @@ namespace App\\Tool {\r
         static function iContains(string $haystack, string $needle): bool\r
         {\r
             // return '' === $needle || \\mb_stripos($haystack, $needle, 0, 'UTF-8') !== false;\r
-            return '' === $needle || \\preg_match('/' . \\preg_quote($needle) . '/ui', $haystack) === 1;\r
+            return '' === $needle || \\preg_match('/' . \\preg_quote($needle, '/') . '/ui', $haystack) === 1;\r
         }\r
 \r
         /**\r
